@@ -1,40 +1,96 @@
+/* Reset e configurações gerais */
 body {
+    margin: 0;
+    padding-top: 70px;
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 0;
-    padding: 0;
     background-color: #f0f0f0;
 }
 
+/* Header e Navegação */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     background: #001c66;
     color: white;
-    padding: 20px;
-}
-
-
-.logo img {
-    width: 200px;
-}
-
-.parceiros {
+    padding: 5px 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 5px 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+#navlist {
+    display: flex;
+    align-items: center;
     gap: 20px;
-    margin-top: 10px;
-    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 200px 0 200px;
+    list-style: none;
 }
 
-.parceiros img {
-    width: 100px;
+#navlist a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
 }
 
+#navlist a:hover {
+    color: #4a90e2;
+}
+
+/* Seção de Parceiros - Carrossel */
+.carrossel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0;
+}
+
+.carrossel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.10s ease-in-out;
+}
+
+.carrossel-item {
+    flex: 0 0 auto;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrossel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Seção de Produtos */
 .produtos {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
-    flex-wrap: wrap;
 }
 
 .produtos img {
@@ -44,17 +100,19 @@ header {
     border-radius: 10px;
     transition: transform 0.3s;
 }
+
+/* Controles de Navegação */
 .prev, .next {
-    cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     padding: 10px;
-    color: white;
     font-size: 24px;
+    color: white;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .prev {
@@ -65,37 +123,196 @@ header {
     right: 10px;
 }
 
+/* Seção de Endereço */
+#endereco {
+    padding: 20px 0;
+    background-color: #f8f8f8;
+}
+
 .mapa-contato {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#mapa {
+    width: 650px;
+    height: 500px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.endereco-info {
+    flex: 0 1 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    min-height: 500px;
+}
+
+.endereco-info h2 {
+    margin: 0;
+    padding: 20px;
+    font-size: 32px;
+    
+    border-radius: 5px;
+}
+
+.endereco-info p {
+    margin: 0;
+    padding: 30px;
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: left;
+    border-radius: 5px;
+}
+
+/* Seção de Contato */
+#contato {
+    padding: 40px 0;
+    background-color: #f8f8f8;
+}
+
+.contato-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contato-container h2 {
+    color: #001c66;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contato-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
+}
+
+.whatsapp-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.whatsapp-contacts {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
     margin-top: 20px;
 }
 
-.mapa-contato h2 {
-    margin-bottom: 10px;
+.contact-person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
+.person-name {
+    font-size: 18px;
+    color: #666;
+}
+
+.person-name i {
+    margin-right: 8px;
+}
+
+.whatsapp-main-btn {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-main-btn:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+
+.whatsapp-number-btn {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-number-btn:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+
+.instagram-section {
+    margin-top: 20px;
+}
+
+.instagram-btn {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.instagram-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.fas.fa-user {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Footer */
 footer {
+    padding: 20px;
     background: #001c66;
     color: white;
-    padding: 20px;
 }
 
-.mapa-contato {
+.footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-iframe {
-    width: 80%;
-    height: 300px;
-    border: none;
-}
-
-.contato {
-    margin-top: 20px;
+    gap: 10px;
 }
 
 

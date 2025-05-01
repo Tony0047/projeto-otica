@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ótica Vitale</title>
     <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <script src="src/script.js"></script>
 </head>
@@ -17,18 +18,11 @@
                 <img src="src/img/logo.png" alt="Ótica Vitale">
             </div>
             <ul id="navlist">
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#parceiros">Parceiros</a>
-                </li>
-                <li>
-                    <a href="#produtos">Produtos</a>
-                </li>
-                <li>
-                    <a href="#contato">Contato</a>
-                </li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#parceiros">Parceiros</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#endereco">Endereço</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -39,14 +33,30 @@
         </section>
         <section id="parceiros">
             <h2>Parceiros</h2>    
-            <div class="parceiros">
-                <img src="src/img/transitions.png" alt="Transitions">
-                <img src="src/img/essilor.png" alt="Essilor">
-                <img src="src/img/zeiss.png" alt="Zeiss">
-                <img src="src/img/crizal.png" alt="Crizal">
-                <img src="src/img/kodak.png" alt="Kodak">
-                <img src="src/img/hoya.png" alt="Hoya">
-                <img src="src/img/varilux.png" alt="Varilux">
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <div class="carrossel-item">
+                        <img src="src/img/transitions.png" alt="Transitions">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="src/img/essilor.png" alt="Essilor">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="src/img/zeiss.png" alt="Zeiss">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="src/img/crizal.png" alt="Crizal">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="src/img/kodak.png" alt="Kodak">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="src/img/hoya.png" alt="Hoya">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="src/img/varilux.png" alt="Varilux">
+                    </div>
+                </div>
             </div>
         </section>
         <section id="produtos">
@@ -60,24 +70,54 @@
             <img src="src/img/oculos5.png" alt="Ócuvlos 5">
         </section>
        
-        </section id="contato">
-            <h2>Contato</h2>
-            <p>Entre em contato conosco para mais informações.</p>
-        
+        <section id="endereco">
             <div class="mapa-contato">
-            <iframe id="mapa"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.156524236196!2d-38.61344412502529!3d-3.8848118960889546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c753009586dc79%3A0x3f85c1c9f7f0ae01!2sMedeiros%20Supermercado%20LJ03!5e1!3m2!1spt-BR!2sbr!4v1743551711096!5m2!1spt-BR!2sbr"
-                >
-            </iframe>
-            <div class="contato">
-                <p>📍 AV. XX, N 230 - CJ. JEREISSATI II, PACATUBA-CE - PÁTIO MEDEIROS SUPERMERCADO, SALA 02</p>
-                <p>📞 (88) 99252-2864 | (85) 99157-0534</p>
-                <p>📷 Instagram: @OTICA_VITALE</p>
+                <iframe id="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.156524236196!2d-38.61344412502529!3d-3.8848118960889546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c753009586dc79%3A0x3f85c1c9f7f0ae01!2sMedeiros%20Supermercado%20LJ03!5e1!3m2!1spt-BR!2sbr!4v1743551711096!5m2!1spt-BR!2sbr">
+                </iframe>
+                <div class="endereco-info">
+                    <h2>Endereço</h2>
+                    <p>📍 Avenida XX,230 - CJ. JEREISSATI II, PACATUBA-CE <br> PÁTIO MEDEIROS SUPERMERCADO, SALA 02</p>
+                </div>
+            </div>
+        </section>
+
+        </section id="contato">
+        <div class="contato-container">
+            <h2>Contatos</h2>
+            <div class="contato-info">
+                <div class="whatsapp-section">
+                    <a href="https://wa.me/5585985517690" target="_blank" class="whatsapp-main-btn">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <div class="whatsapp-contacts">
+                        <div class="contact-person">
+                            <span class="person-name"><i class="fas fa-user"></i> Mikaelly Torres</span>
+                            <a href="https://wa.me/5588992522864" target="_blank" class="whatsapp-number-btn">
+                                <i class="fab fa-whatsapp"></i> (88) 99252-2864
+                            </a>
+                        </div>
+                        <div class="contact-person">
+                            <span class="person-name"><i class="fas fa-user"></i> Bruna Severo</span>
+                            <a href="https://wa.me/5585991570534" target="_blank" class="whatsapp-number-btn">
+                                <i class="fab fa-whatsapp"></i> (85) 99157-0534
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-section">
+                    <a href="https://www.instagram.com/otica_vitale" target="_blank" class="instagram-btn">
+                        <i class="fab fa-instagram"></i> ÓTICA VITALE
+                    </a>
+                </div>
             </div>
         </div>
+    </section>
     </main>
     <footer>
-
+        <div class="footer-content">
+            <p>© 2024 Ótica Vitale.</p>
+            <p>Desenvolvido com ❤️</p>
     </footer>
 </body>
 
